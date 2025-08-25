@@ -1,0 +1,44 @@
+@media screen and (max-width: 980px) { 
+  section#MesContacts article#MesContactsBD {
+    border-right: 0px solid;
+  }
+
+  /*section#MesIDEs article {
+    display: block;
+  }*/
+}
+
+@media screen and (max-width: 1260px) {
+  section#MesIDEs article {
+    display: block;
+  }
+
+  section#MesProjets article {
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  section.footer h1 {
+    font-size: 20px;
+  }
+
+  section.footer p {
+    font-size: 10px;
+  }
+
+  section.footer a {
+    font-size: 10px;
+  }
+}
+
+/*
+@media screen and (max-width: 1260px) {
+  section#MesIDEs article#articleIDEl1 {
+    display: block;
+  }
+  
+  #MesIDEs div#explicationIDE {
+    transition: max-width 0.2s ease, padding 0.2s ease, border-radius 0.5s ease;
+  }
+}*/

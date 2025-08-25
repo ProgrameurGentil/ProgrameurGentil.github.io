@@ -1,0 +1,529 @@
+:root {
+	--color-bg-body : #1A1A1D;
+	--color-white : white;
+	--color-bg-h-selection : #7a2161;
+	--color-bg-sommaire : #0F0F0F;
+	--color-bg-ide : #3C3D37;
+	--color-bg-projet : #222222;
+	--color-projet-a : #CCF2F4;
+	--color-bg-hobbies : #222222;
+	--color-bg-message : #222831;
+	--color-bg-footer : #181823; 
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--color-bg-body);
+	color: var(--color-white);
+	overflow-x: hidden;
+}
+
+p::selection {
+	color: var(--color-white);
+  background: #49098e;
+}
+
+h1::selection {
+	color: var(--color-white);
+	background: var(--color-bg-h-selection);
+}
+
+h2::selection {
+	color: var(--color-white);
+	background: var(--color-bg-h-selection);
+}
+
+h3::selection {
+	color: var(--color-white);
+	background: var(--color-bg-h-selection);
+}
+
+a {
+	color: var(--color-white);
+	text-decoration: none;
+	user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+a::selection {
+	color: var(--color-white);
+	background: none;
+}
+
+br::selection {
+	color: var(--color-white);
+	background: none;
+}
+
+.neon-bleu {
+	color: #c6e2ff;
+	text-shadow:
+    0 0 6px rgba(202,228,225,0.92),
+    0 0 30px rgba(202,228,225,0.34),
+    0 0 12px rgba(30,132,242,0.52),
+    0 0 21px rgba(30,132,242,0.92),
+    0 0 34px rgba(30,132,242,0.78),
+    0 0 54px rgba(30,132,242,0.92);
+}
+
+p, label {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+h1 {
+	font-size: 40px;
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+  text-align: left;
+}
+
+hr {
+	margin: 5px 40px 5px auto;
+}
+
+hr#doubleBarCourte {
+	margin: 10px 160px -8px 160px;
+	border: 1px double;
+}
+
+main {
+	/*height:2000px;*/
+  padding-left:300px;
+}
+
+
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+button {
+	border: 0px;
+}
+
+
+/*                                                   */
+
+body[data-theme="light"] {
+  background-color: #FFFDF6;
+  color: #000000;
+}
+
+/*mon sommaire*/
+[data-theme="light"] .Sommaire {
+  background-color: #D5C7A3;
+}
+
+[data-theme="light"] .Sommaire nav {
+  background-color: #D5C7A3;
+  color: #000000;
+}
+
+[data-theme="light"] .Sommaire nav a {
+  color: #000000;
+}
+
+/*mes projets*/
+[data-theme="light"] section#MesProjets .projet {
+  background-color: #FAF6E9;
+  color: #000000;
+}
+
+[data-theme="light"] section#MesProjets .projet a {
+  color: #1E2A78;
+}
+
+/*mes hobbies*/
+[data-theme="light"] section#MesHobbies article#articleHobbies {
+  background-color: #FAF6E9;
+  color: #000000;
+}
+
+/*mes ides*/
+[data-theme="light"] section#MesIDEs article div#IDE div#explicationIDE {
+  color: #000000;
+  background-color: #FAF6E9;
+}
+
+/*mes contacts*/
+[data-theme="light"] section#MesContacts article p {
+  color: #000000;
+}
+
+/*
+[data-theme="light"] section#MesContacts section div#message input[type="text"], input[type="mail"], textarea#corps, button#envoiMessage {
+  background-color : #FAF6E9;
+  color: #000000;
+} */
+
+[data-theme="light"] section#MesContacts section div#message input[type="text"]#sujet, 
+[data-theme="light"] section#MesContacts section div#message input[type="mail"]#mail, 
+[data-theme="light"] section#MesContacts section div#message textarea, 
+[data-theme="light"] section#MesContacts section div#message button {
+  background-color : #FAF6E9;
+  color: #000000;
+}
+
+/*sources*/
+[data-theme="light"] section.footer {
+  color: #000000;
+  background-color: #F6F6F6;
+}
+
+[data-theme="light"] section.footer ul li p a {
+  color: #000000;
+} 
+
+/*                                                   */
+
+/* //////////// header (titre) //////////// */
+header h1 {
+	padding-left:300px;
+	font-size: 55px;
+	font-family: "Chivo Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+
+header hr {
+	margin: 0 40px 0 300px;
+}
+
+/* //////////// Sommaire //////////// */
+aside.Sommaire {
+	position: fixed;
+	left:0;
+  top:0;
+  bottom:0;
+  width:283px;
+  height:100%;
+  background-color: #0F0F0F;
+}
+
+nav {
+	background-color: #0F0F0F;
+	margin: 0 0 10px 0;
+}
+
+nav img {
+	width: 267px;
+	margin: 5px; /* haut droite bas gauche*/
+	border: 1px solid;
+	border-color: white;
+}
+
+nav iframe {
+	margin: 0 5px 5px 5px;
+}
+
+nav h1 {
+	margin: 2px 0 10px 10px ;
+}
+
+
+nav li {
+	/*list-style: none;*/
+	list-style-type: "> ";
+	font-family: "Poetsen One", sans-serif;
+	margin: 5px 0;
+}
+
+nav li a:hover {
+	color: #CAE8BD;
+}
+
+/* //////////// div de selection de themes //////////// */
+
+div.ConteneurTheme {
+	width: 45px;
+  height: 45px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+div.ConteneurTheme button {
+	padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+div.ConteneurTheme button:active {
+  transform: scale(0.9);
+}
+
+div.ConteneurTheme img {
+	width: 100%;
+}
+
+/* //////////// section Mes IDEs //////////// */
+section#MesIDEs {
+	margin: 0 0 25px 0;
+	text-align: center;
+}
+
+section#MesIDEs div {
+	display: inline-block;
+	/*margin: -15px -5px -15px 0;*/
+}
+
+section#MesIDEs article {
+	text-align: center;
+  margin: 20px 14px;
+  display: inline-block;
+}
+
+#MesIDEs div#explicationIDE {
+	/*display: none;
+	
+	transition: translate 2s;*/
+	position: relative;
+	top: 0px;
+	height: 100px;
+	max-width: 0;
+	overflow: hidden;
+	transition: max-width 1s ease, padding 1s ease, border-radius 0.5s ease;
+	background-color: #3C3D37;
+}
+
+#MesIDEs img {
+	width:100px;
+	height:100px;
+	/*margin: 10px;*/
+	/*transition: transform .1s;*/
+}
+
+#MesIDEs div#IDE:hover div#explicationIDE {
+	/*display: inline-block;*/
+	padding: 0 10px;
+	border-radius: 10px;
+	max-width: 300px;
+} 
+
+#MesIDEs div#IDE:hover div#explicationIDE {
+	translate: 10px;
+}
+
+/*#MesIDEs img:hover {
+	transform: scale(1.5);
+	margin: 10px 5px;
+	overflow: hidden;
+}*/
+/*
+#MesIDEs img:hover + #explicationIDE{
+	display: inline-block;
+	background-color: #3C3D37;
+	padding: 0 10px;
+	border-radius: 10px;
+}*/
+
+/* //////////// section Mes Projets //////////// */
+.projet {
+	display: inline-table;
+	text-align: justify;
+	width: 500px;
+	border: 1px solid;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: #222222;
+	margin: 3px 0;
+}
+
+.projet #haut {
+	text-align: center;
+}
+
+.projet hr {
+	text-align: center;
+	margin: auto;
+	width: 440px;
+}
+
+.projet a {
+	text-decoration: underline;
+	color: #CCF2F4;
+	text-align: right;
+}
+
+#MesProjets #note p {
+	font-size: 14px;
+}
+
+#MesProjets .projet img {
+	width: 50%;
+}
+
+#MesProjets .projet #imageProjet {
+	text-align: center;
+	margin: 10px 0 15px 0;
+}
+
+/* //////////// section Mes Langages //////////// */
+section#MesLangages div {
+	display: inline-block;
+	
+}
+
+section#MesLangages article {
+	text-align: center;
+	margin: auto;
+}
+
+#MesLangages img {
+	width:100px;
+	height:100px;
+	margin: 10px;
+	transition: transform .1s;
+}
+
+#MesLangages img:hover {
+	transform: scale(1.5);
+	margin: 10px 5px;
+	overflow: hidden;
+}
+
+/* //////////// section Mes Hobbies //////////// */
+section#MesHobbies {
+	margin: 10px 2px;
+}
+
+section#MesHobbies article {
+	margin: 5px 0;
+}
+
+section#MesHobbies article#articleHobbies {
+	display: inline-table;
+	text-align: justify;
+	width: 500px;
+	border: 1px solid;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: #222222;
+}
+
+hr#hrHobbies {
+	margin: 5px 350px 5px auto;
+}
+
+section#MesHobbies img {
+	width: 100px;
+	height: 100px;
+	border-radius: 1000px;
+}
+
+section#MesHobbies img#iconGithub{
+	im
+}
+/*
+section#MesHobbies aside {
+	margin-right: 5px;
+}*/
+
+/* //////////// section Mes Contacts //////////// */
+
+section#MesContacts {
+	margin: 0 0 20px 0;
+}
+
+section#MesContacts article {
+	display: inline-flex;
+  flex-direction: column;
+  width: 330px;
+  position: relative;
+}
+
+section#MesContacts article#MesContactsBD {
+	border-right: 1px solid;
+}
+
+section#MesContacts img {
+	width: 50px;
+	height: 50px;
+}
+
+section#MesContacts div {
+	display: flex;
+	margin: 10px 15px;
+}
+
+section#MesContacts div img {
+	margin: 0 15px;
+}
+
+section#MesContacts section div#message{
+	display: block;
+}
+
+section#MesContacts section div#message input[type="text"]#sujet, 
+section#MesContacts section div#message input[type="mail"]#mail, 
+section#MesContacts section div#message textarea, 
+section#MesContacts section div#message button {
+  background-color : #222831;
+  color: white;
+  border: 0px;
+}
+
+section#MesContacts section textarea {
+	resize: none;
+	width: 500px;
+	height: 200px;
+}
+
+/* //////////// footer //////////// */
+
+.footer {
+	padding: 10px;
+	padding-left:300px;
+	background-color: #181823;
+	color: white;
+	/*position: static;*/
+  margin: -10px;
+}
+
+.footer h1 {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  margin: 0px 10px 25px 10px
+}
+.footer a {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.footer p {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer ul {
+	margin: -20px;
+}
+
+.footer li {
+	margin: -10px;
+	list-style-type: "";
+}

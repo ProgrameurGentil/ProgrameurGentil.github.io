@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css">
+    <script src="./javascript/theme.js"></script>
+    <script src="./javascript/webhook.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Dosis:wght@200..800&family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Dosis:wght@200..800&family=Fira+Code:wght@300..700&family=Jersey+10&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Dosis:wght@200..800&family=Fira+Code:wght@300..700&family=Jersey+10&family=Poetsen+One&display=swap" rel="stylesheet">
+
+  
+  </head>
+  <body data-theme="dark">
+    <header>
+      <h1>
+        Bienvenue à vous
+      </h1>
+      <hr>
+    </header>
+    <aside class="Sommaire">
+      <nav>
+        <img src="./ressources/gif/cyberpunk1.gif" alt="gif cyberpunk">
+        <div>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4VixtFLHrhChb9OquYBjiA?utm_source=generator" width="270" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <h1>Sommaire</h1>
+        <ul>
+          <li>
+            <a href="#QuiSuisJe">Qui suis-je ?</a>
+          </li>
+          <li>
+            <a href="#MonParcours">Mon parcours</a>
+          </li>
+          <li>
+            <a href="#MesProjets">Mes projets</a>
+          </li>
+          <li>
+            <a href="#MesLangages">Mes langages</a>
+          </li>
+          <li>
+            <a href="#MesIDEs">Mes IDEs</a>
+          </li>
+          <li>
+            <a href="#MesHobbies">Mes hobbies</a>
+          </li>
+          <li>
+            <a href="#MesContacts">Mes contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <div class="ConteneurTheme">
+        <button onclick="setTheme()">
+          <div id="divTheme">
+            <img src="./ressources/bouton/theme/dark.png" id="imageTheme" alt="icon theme">
+          </div>
+        </button>
+      </div>
+      <section id="QuiSuisJe">
+        <h1>Qui suis-je ?</h1>
+        <p>
+          Je m'appelle Henzo RENET, j'ai 18 ans et je suis actuellement en étude d'informatique à Limoges. 
+        </p>
+      </section> 
+      <section id="MonParcours">
+        <h1>Mon Parcours</h1>
+        <ul>
+          <li>
+            <p>Ecole primaire publique à Saint Médard de Guizières</p>
+          </li>
+          <li>
+            <p>Collège publique à Coutras</p>
+            <ul>
+              <li>
+                <p>Option SUN</p>
+              </li>
+              <li style="list-style-type: '>> ';">
+                <p>Brevet mention bien</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Lycée publique Max Linder à Libourne</p>
+            <ul>
+              <li>
+                <p>Seconde option S.I. (science de l'ingénieur)</p>
+              </li>
+              <li>
+                <p>Première spécialité S.I. (science de l'ingénieur)</p>
+              </li>
+              <li>
+                <p>Terminal spécialité mathématiques et N.S.I. (Numérique et Science Informatique)</p>
+              </li>
+              <li style="list-style-type: '>> ';">
+                <p>Bac général mention assez bien</p>
+              </li>
+              <li style="list-style-type: '>> ';">
+                <p>Diplome du B.I.A. (Brevet d'Initiation à l'Aréonotique)</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>B.U.T. informatique à Limoges [En cours]</p>
+          </li>
+        </ul>
+        <hr style="margin: 5px 1200px 5px auto;">
+        <ul>
+          <li style="list-style-type: '>> ';">
+            <p>Diplome de premier secours</p>
+          </li>
+        </ul>
+      </section>
+      <hr>
+      <section id="MesProjets">
+        <h1>Mes projets</h1>
+        <article id="note">
+          <div>
+            <p>
+              *Les SAEs (Situation d'Apprentissage et d'Evaluation) sont des travaux de groupes. 
+            </p>
+            <p>
+              *L'IHM (Interface Homme-Machine) est une interface graphique
+            </p>
+          </div>
+        </article>
+        <article class="projet">
+          <div id="haut">
+            <h2>Auto Fond</h2>
+            <hr>
+          </div>
+          <div>
+            <p>
+              Auto Fond est un gestionnaire de fond d'écran développé en python. Il permet de les appliquer par défaut ou comme fond (remise du fond d'écran par défaut au redémarrage).
+            </p>
+          </div>
+          <div id="imageProjet">
+            <img src="./ressources/projet/AutoFond/screenshot_autofond.png" alt="screenshot de l'application">
+          </div>
+          <div>
+            <a href="https://github.com/ProgrameurGentil/Auto-Fond.git">Lien vers le depot GitHub</a>
+          </div>
+        </article>
+        <article class="projet">
+          <div id="haut">
+            <h2>SAE1 de développement (Semestre 1)</h2>
+            <hr>
+          </div>
+          <div>
+            <p>
+              Dans cette SAE, nous avons réalisé trois jeux en format console sous python 3: le jeu des allumettes, le jeu des devinettes et le jeu du morpion. Il est également possible de voir nos parties précédentes, de s'enregistrer et de voir les règles des jeux.
+            </p>
+          </div>
+          <div id="imageProjet">
+            <img src="./ressources/projet/SAE1/screenshot_sae1.png" alt="screenshot de l'application">
+          </div>
+          <div>
+            <a href="https://github.com/ProgrameurGentil/SAE1-init_dev.git">Lien vers le depot GitHub</a>
+          </div>
+        </article>
+        <article class="projet">
+          <div id="haut">
+            <h2>SAE2 de développement (Semestre 2)</h2>
+            <hr>
+          </div>
+          <div>
+            <p>
+              Dans cette SAE, nous avons réalisé le jeu de socièté Latice en langage Java avec notement une partie IHM.
+            </p>
+          </div>
+          <div id="imageProjet">
+            <!-- <img src="./ressources/projet/SAE1/screenshot_sae1.png" alt="screenshot de l'application"> -->
+          </div>
+          <div>
+            <a href="#">Lien vers le depot GitHub</a>
+          </div>
+        </article>
+        <article class="projet">
+          <div id="haut">
+            <h2>Bag App [en cours]</h2>
+            <hr>
+          </div>
+          <div>
+            <p>
+              Application qui permet de remplacer les dossiers de façon minimaliste et design.
+            </p>
+          </div>
+          <div>
+            <!--- image --->
+          </div>
+        </article>
+      </section>
+      <hr>
+      <section id="MesLangages">
+        <h1>Mes langages</h1>
+        <article>
+          <div>
+            <img src="https://skillicons.dev/icons?i=html" alt="html" title="HTML" />
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=css" alt="css" title="CSS" />
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=c" alt="c" title="C" />
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=linux" alt="linux" title="Linux" />
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=sqlite" alt="sqlite" title="SQLite" />
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=java" alt="java" title="Java" />
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=python" alt="python" title="Python" />
+          </div>
+          <div>
+            <img src="https://skillicons.dev/icons?i=r" alt="r" title="R" />
+          </div>
+        </article>
+      </section>
+      <section id="MesIDEs">
+        <h1>Mes IDEs</h1>
+        <article id="articleIDEl1">
+          <div id="IDE">
+            <img src="https://img.logo.dev/sublimetext.com?token=pk_UxxJ9gHBRPOCH2YLn--uRQ" alt="Sublime Text"/>
+            <div id="explicationIDE">
+              <h3>Syblime Text</h3>
+              <p>
+                Pour le developpement web
+              </p>
+            </div>
+          </div>
+        </article>
+        <article id="articleIDEl1">
+          <div id="IDE">
+            <img src="https://skillicons.dev/icons?i=vscode" alt="VScode"/>
+            <div id="explicationIDE">
+              <h3>Vscode</h3>
+              <p>
+                Pour le developpement web
+              </p>
+            </div>
+          </div>
+        </article>
+        <article id="articleIDEl2">
+          <div id="IDE">
+            <img src="https://skillicons.dev/icons?i=eclipse" alt="Eclipse IDE"/>
+            <div id="explicationIDE">
+              <h3>Eclipse</h3>
+              <p>
+                Pour le Java
+              </p>
+            </div>
+          </div>
+        </article>
+        <article id="articleIDEl2">
+          <div id="IDE">
+            <img src="https://i0.wp.com/iledefrance-unowhy.com/wp-content/uploads/2021/04/edupython-logo.png?fit=400%2C400&ssl=1" alt="Edupython"/>
+            <div id="explicationIDE">
+              <h3>Edupython</h3>
+              <p>
+                Pour le Python
+              </p>
+            </div>
+          </div>
+        </article>
+        <article id="articleIDEl2">
+          <div id="IDE">
+            <img src="https://github.com/user-attachments/assets/dd0761f5-169f-4a88-ad80-66862c2ac3df" alt="RStudio"/>
+            <div id="explicationIDE">
+              <h3>RStudio</h3>
+              <p>
+                Pour le R
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <hr>
+      <section id="MesHobbies">
+        <h1>Mes hobbies</h1>
+        <article id="articleHobbies" style="height: 340px;">
+          <h2>Collection sur les pompiers &#128658;</h2>
+          <hr id="hrHobbies">
+          <aside style="float: right; margin: 5px;">
+            <img src="./ressources/pompier/collection1.png" alt="image de ma collection">
+          </aside>
+          <p>
+            Je collectionne depuis plusieurs années, des objets liés aux pompiers :
+          </p>
+          <ul>
+            <li>
+              <p>
+                Plus d'une centaine de véhicules de pompiers;
+              </p>
+            </li>
+            <li>
+              <p>
+                Deux casques (un recent et un ancien);
+              </p>
+            </li>
+            <li>
+              <p>
+                Pluiseurs posters et affiches;
+              </p>
+            </li>
+            <li>
+              <p>
+                Des objects dérivés;
+              </p>
+            </li>
+          </ul>
+        </article>
+        <article id="articleHobbies">
+          <h2>Jeux vidéos et animés &#128126;</h2>
+          <hr id="hrHobbies">
+          <aside style="float: right; margin: 5px;">
+            <img src="./ressources/jeuVideo_anime/minecraft.png" alt="image d'un jeu video">
+          </aside>
+          <p>
+            J'aime bien les jeux vidéos même si je n'excele pas dans ce domaine : quelques fps mais surtout des jeux chills comme Minecraft (Java biensur) ou Animal Crossing.
+          </p>
+          <br>
+          <aside>
+            <img src="./ressources/jeuVideo_anime/anime.png" style="float: left; margin: 5px;" alt="image d'un anime">
+          </aside>
+          <p>
+            Contrairement aux jeux vidéos, je regarde tous les thèmes d'animés. De Naruto à Scissor Seven, tout me va ^^.
+          </p>
+        </article>
+        <article id="articleHobbies">
+          <h2>Sport &#128692;</h2>
+          <hr id="hrHobbies">
+          <p>
+            J'ai fait pendant 7 ans du vélo de route et 4 ans de badminton. Actuelement, je fais de la marche à pieds. 
+          </p>
+        </article>
+      </section>
+      <hr>
+      <section id="MesContacts">
+        <h1>Mes contacts</h1>
+        <article id="MesContactsBD">
+          <a href="mailto:henzo.renet@etu.unilim.fr">
+            <div>
+              <img src="./ressources/icon/e-mail.png" alt="logo e-mail">
+              <p>E-mail</p>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/henzodu33?igsh=MTFtYTRrbW1lbzZqcg==">
+            <div>
+              <img src="./ressources/icon/instagram.png" alt="logo instagram">
+              <p>Instagram</p>
+            </div>
+          </a>
+          <a href="https://github.com/ProgrameurGentil">
+            <div>
+              <img src="./ressources/icon/github_clair.png" alt="logo github" id="iconGithub">
+              <p>Github</p>
+            </div>
+          </a>
+        </article>
+        <article>
+          <a href="https://stackoverflow.com/users/23424763/programmeurdu33">
+            <div>
+              <img src="./ressources/icon/stack-overflow.png" alt="logo stack overflow">
+              <p>Stack Overflow</p>
+            </div>
+          </a>
+          <a href="https://discord.gg/TccMp77x">
+            <div>
+              <img src="./ressources/icon/discord.png" alt="logo discord">
+              <p>Discord</p>
+            </div>
+          </a>
+        </article>
+        <section class="message">
+          <div id="message">
+            <text style="font-size: 20px; margin:5px 0;">Me soumettre un message :</text>
+            <input type="mail" id="mail" name="mail" placeholder="Entrez votre mail" style="display:block; margin:5px 0;">
+            <input type="text" id="sujet" name="sujet" placeholder="Entrez le sujet" style="display:block; margin:5px 0;">
+            <textarea id="corps" placeholder="Entrez votre message" style="display:block;"></textarea>
+            <button id="envoiMessage" name="envoiMessage" onclick="envoyerMessage()" style="display:block; margin:5px 0;">Soumettre</button>
+          </div>
+        </section>
+      </section>
+      
+      
+    </main>
+    <footer>
+      <section class="footer">
+        <h1>Sources</h1>
+      <ul>
+        <li>
+          <p>Icons :</p>
+        </li>
+        <li>
+          <p><a href="https://www.flaticon.com/authors/pixel-perfect">Pixel perfect</a></p>
+        </li>
+        <li>
+          <p><a href="https://www.flaticon.com/fr/auteurs/uniconlabs">Uniconlabs</a></p>
+        </li>
+        <li>
+          <p><a href="https://www.flaticon.com/fr/auteurs/iconsmind">iconsmind</a></p>
+        </li>
+        <li>
+          <p><a href="https://www.flaticon.com/fr/auteurs/freepik">Freepik</a></p>
+        </li>
+        <li>
+          <p><a href="https://www.flaticon.com/fr/auteurs/bsd">bsd</a></p>
+        </li>
+      </ul>
+      </section>
+    </footer>
+  </body>
+
+</html>
