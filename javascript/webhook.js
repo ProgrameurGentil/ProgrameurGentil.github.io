@@ -20,6 +20,9 @@ function envoyerMessage() {
         .then(response => {
             if (response.ok) {
                 alert("Message bien envoyé. Merci !");
+                mail.value = "";
+                sujet.value = "";
+                corps.value = "";
             } else {
                 alert("Erreur lors de l'envoi. :/");
             }
@@ -27,4 +30,5 @@ function envoyerMessage() {
     } else {
         alert("Veuillez remplir tout les champs")
     }
+
 }
