@@ -1,5 +1,13 @@
 console.log("Script chargé : gestion du theme");
 
+document.addEventListener("DOMContentLoaded", () => {
+	if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+	  setDark();
+	} else {
+	  setLight();
+	}
+});
+
 function setDark() {
 	document.body.setAttribute("data-theme", "dark");
 	setThemeIconBouton("dark");
