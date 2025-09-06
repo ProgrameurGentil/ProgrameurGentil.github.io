@@ -6,6 +6,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/responsive.css">
+    <link rel="icon" type="image/png" href="./ressources/logo/logo.png">
     <script src="./javascript/theme.js"></script>
     <script src="./javascript/webhook.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,8 +29,8 @@
     <aside class="Sommaire">
       <nav>
         <img src="./ressources/gif/cyberpunk1.gif" alt="gif cyberpunk">
-        <div>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4VixtFLHrhChb9OquYBjiA?utm_source=generator" width="270" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div id="iframe">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4VixtFLHrhChb9OquYBjiA?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
         <h1>Sommaire</h1>
         <ul>
@@ -385,11 +386,11 @@
         </article>
         <section class="message">
           <div id="message">
-            <text style="font-size: 20px; margin:5px 0;">Me soumettre un message :</text>
-            <input type="mail" id="mail" name="mail" placeholder="Entrez votre mail" style="display:block; margin:5px 0;">
-            <input type="text" id="sujet" name="sujet" placeholder="Entrez le sujet" style="display:block; margin:5px 0;">
-            <textarea id="corps" placeholder="Entrez votre message" style="display:block;"></textarea>
-            <button id="envoiMessage" name="envoiMessage" onclick="envoyerMessage()" style="display:block; margin:5px 0;">Soumettre</button>
+            <text style="font-size: 30px; margin:5px 0;">Me soumettre un message :</text>
+            <input type="mail" id="mail" name="mail" placeholder="Entrez votre mail" style="display:block; margin:5px 0; padding: 5px;">
+            <input type="text" id="sujet" name="sujet" placeholder="Entrez le sujet" style="display:block; margin:5px 0; padding: 5px;">
+            <textarea id="corps" placeholder="Entrez votre message" style="display:block; padding: 5px;"></textarea>
+            <button id="envoiMessage" name="envoiMessage" onclick="envoyerMessage()" style="display:block; margin:5px 0; padding: 5px; font-size: 15px;">Soumettre</button>
           </div>
         </section>
       </section>

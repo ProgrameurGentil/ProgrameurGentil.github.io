@@ -1,3 +1,7 @@
+* {
+	transition: background 1s;
+}
+
 :root {
 	--color-bg-body : #1A1A1D;
 	--color-white : white;
@@ -60,17 +64,6 @@ a::selection {
 br::selection {
 	color: var(--color-white);
 	background: none;
-}
-
-.neon-bleu {
-	color: #c6e2ff;
-	text-shadow:
-    0 0 6px rgba(202,228,225,0.92),
-    0 0 30px rgba(202,228,225,0.34),
-    0 0 12px rgba(30,132,242,0.52),
-    0 0 21px rgba(30,132,242,0.92),
-    0 0 34px rgba(30,132,242,0.78),
-    0 0 54px rgba(30,132,242,0.92);
 }
 
 p, label {
@@ -231,7 +224,16 @@ nav img {
 }
 
 nav iframe {
-	margin: 0 5px 5px 5px;
+	margin: 0 0 5px -2px;
+}
+
+div#iframe * {
+  scrollbar-width: none;     
+  -ms-overflow-style: none;  
+}
+
+div#iframe *::-webkit-scrollbar {
+  display: none;
 }
 
 nav h1 {
@@ -258,6 +260,7 @@ div.ConteneurTheme {
   position: fixed;
   right: 20px;
   bottom: 20px;
+  z-index: 8;
 }
 
 div.ConteneurTheme button {

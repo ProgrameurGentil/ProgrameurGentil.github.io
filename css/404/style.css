@@ -1,0 +1,220 @@
+* {
+	margin: 0;
+	padding: 0;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+}
+
+:root {
+	--couleur-sombre : #2d2d2d;
+	--couleur-ecriture-sombre: rgb(250, 250, 250);
+	--couleur-sombre-footer : #1A1A1A;
+	--couleur-sombre-header: #242424;
+	--couleur-sombre-point: #303030;
+
+	--couleur-clair: #F8FAFC;
+	--couleur-ecriture-clair: black;
+	--couleur-clair-footer: #CACACA;
+	--couleur-clair-header: #D4D3DC;
+	--couleur-clair-point: #f5f5f5;
+}
+
+body {
+	background-color: var(--couleur-sombre);
+	color: var(--couleur-ecriture-sombre);
+	width: 100%;
+	height: 100%;
+}
+
+body[data-theme="light"] {
+	background-color: var(--couleur-clair);
+	color: var(--couleur-ecriture-clair);
+}
+
+a {
+	color: var(--couleur-ecriture-sombre);
+	text-decoration: none;
+	user-drag: none;
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+button {
+	border: 0;
+}
+
+header {
+	background-color: var(--couleur-sombre-header);
+	color: var(--couleur-ecriture-sombre);
+	display: flex;
+	position: relative;
+	padding: 15px;
+	justify-content: space-between;
+}
+
+[data-theme="light"] header {
+	background-color: var(--couleur-clair-header);
+	color: var(--couleur-ecriture-clair);
+}
+
+header > div#titre {
+	padding-left: 20px;
+}
+
+nav.menu {
+	display : flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+nav.menu > div {
+	padding: 0 15px;
+}
+
+[data-theme="light"] nav.menu > div a {
+	color: var(--couleur-ecriture-clair);
+}
+
+main {
+	color: var(--couleur-ecriture-sombre);
+	position: relative;
+	justify-items: center;
+	align-items: center;
+	margin: 50px 0;
+	height: 100%;
+	padding: 0 15px;
+}
+
+[data-theme="light"] main {
+	color: var(--couleur-clair-sombre);
+}
+
+main > div.theme {
+	position: fixed;
+	right: -240px;
+	top: 70px;
+	z-index: 8;
+}
+
+main > div.theme img#imageTheme {
+	width: 5%;
+}
+
+main > div.theme button {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: transparent;
+	width: 100%;
+	height: 100%;
+}
+
+main > div.theme button:active {
+  transform: scale(0.9);
+}
+
+main article#articleEcrito div#ecrito p:first-child{
+	margin-bottom: 10px;
+}
+
+main article#articleBouton > div > button#boutonRetour {
+	border: 0;
+	padding: 10px 30px;
+    border-radius: 20px;
+    margin: 20px 0;
+    background-color: #C0C0C0;
+}
+
+main article#articlePoint > div#point > svg > circle {
+    fill: var(--couleur-sombre-point);
+}
+
+[data-theme="light"] main article#articlePoint > div#point > svg > circle {
+    fill: var(--couleur-clair-point);
+}
+
+footer {
+	color: var(--couleur-ecriture-sombre);
+	background-color: var(--couleur-sombre-footer);
+	position: absolute;
+	display: flex;
+	bottom: 0px;
+	width: 100%;
+	padding: 10px;
+	justify-content: space-around;
+}
+
+[data-theme="light"] footer {
+	color: var(--couleur-ecriture-clair);
+	background-color: var(--couleur-clair-footer);
+}
+
+footer > section {
+	padding: 0 15px;
+}
+
+footer > section#contact div a {
+	padding-top: 10px;
+}
+
+[data-theme="light"] footer > section#contact div a {
+	color: var(--couleur-ecriture-clair);
+}
+
+footer > section#reseaux div.reseau {
+	display: flex;
+	position: relative;
+	justify-items: center;
+	align-items: center;
+	padding-top: 10px;
+}
+
+footer > section#reseaux div.reseau{
+	padding-top: 10px;
+}
+
+footer > section#reseaux div.reseau > p {
+	padding-left: 10px;
+}
+
+footer > section#reseaux div.reseau > p {
+	padding-left: 10px;
+}
+
+[data-theme="light"] footer > section#reseaux div.reseau svg {
+	color: black;
+}
+
+footer > section#source div {
+	padding-top: 10px;
+}
+
+[data-theme="light"] footer > section#source div a {
+	color: var(--couleur-ecriture-clair);
+}
+
+@media (min-width: 650px) {
+	nav.menu {
+		display: flex;
+	}
+
+	main > div.theme img#imageTheme {
+		width: 10%;
+	}
+
+	main > div.theme {
+		position: fixed;
+		right: -220px;
+		top: 70px;
+		z-index: 8;
+	}
+}

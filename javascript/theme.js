@@ -3,13 +3,13 @@ console.log("Script chargé : gestion du theme");
 function setDark() {
 	document.body.setAttribute("data-theme", "dark");
 	setThemeIconGithub("dark");
-	setThemeIconBouton("dark")
+	setThemeIconBouton("dark");
 }
 
 function setLight() {
 	document.body.setAttribute("data-theme", "light");
 	setThemeIconGithub("light");
-	setThemeIconBouton("light")
+	setThemeIconBouton("light");
 }
 
 function setThemeIconGithub(theme) {
