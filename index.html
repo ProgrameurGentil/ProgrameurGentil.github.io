@@ -3,12 +3,15 @@
 
   <head>
     <meta charset="UTF-8" />
-    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Henzo RENET</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/responsive.css">
     <link rel="icon" type="image/png" href="./ressources/logo/logo.png">
     <script src="./javascript/theme.js"></script>
     <script src="./javascript/webhook.js"></script>
+    <script src="./javascript/responsive.js"></script>
+    <script src="./javascript/menu.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
@@ -24,45 +27,56 @@
       <h1>
         Bienvenue à vous
       </h1>
-      <hr>
+      <hr align="left">
     </header>
     <aside class="Sommaire">
       <nav>
-        <img src="./ressources/gif/cyberpunk1.gif" alt="gif cyberpunk">
-        <div id="iframe">
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4VixtFLHrhChb9OquYBjiA?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div id="sommaireHaut">
+          <img src="./ressources/gif/cyberpunk1.gif" alt="gif cyberpunk">
+          <div id="iframe">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4VixtFLHrhChb9OquYBjiA?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+         </div>
+         <div id="sommaireBas"> 
+          <h1>Sommaire</h1>
+          <ul>
+            <li>
+              <a href="#QuiSuisJe">Qui suis-je ?</a>
+            </li>
+            <li>
+              <a href="#MonParcours">Mon parcours</a>
+            </li>
+            <li>
+              <a href="#MesProjets">Mes projets</a>
+            </li>
+            <li>
+              <a href="#MesLangages">Mes langages</a>
+            </li>
+            <li>
+              <a href="#MesIDEs">Mes IDEs</a>
+            </li>
+            <li>
+              <a href="#MesHobbies">Mes hobbies</a>
+            </li>
+            <li>
+              <a href="#MesContacts">Mes contacts</a>
+            </li>
+          </ul>
         </div>
-        <h1>Sommaire</h1>
-        <ul>
-          <li>
-            <a href="#QuiSuisJe">Qui suis-je ?</a>
-          </li>
-          <li>
-            <a href="#MonParcours">Mon parcours</a>
-          </li>
-          <li>
-            <a href="#MesProjets">Mes projets</a>
-          </li>
-          <li>
-            <a href="#MesLangages">Mes langages</a>
-          </li>
-          <li>
-            <a href="#MesIDEs">Mes IDEs</a>
-          </li>
-          <li>
-            <a href="#MesHobbies">Mes hobbies</a>
-          </li>
-          <li>
-            <a href="#MesContacts">Mes contacts</a>
-          </li>
-        </ul>
       </nav>
     </aside>
     <main>
       <div class="ConteneurTheme">
-        <button onclick="setTheme()">
+        <button id="boutonTheme">
           <div id="divTheme">
             <img src="./ressources/bouton/theme/dark.png" id="imageTheme" alt="icon theme">
+          </div>
+        </button>
+      </div>
+      <div class="ConteneurMenu">
+        <button id="boutonMenu">
+          <div id="divMenu">
+            <img src="./ressources/bouton/menu/dark.png" id="imageMenu" alt="icon menu">
           </div>
         </button>
       </div>
@@ -84,7 +98,7 @@
               <li>
                 <p>Option SUN</p>
               </li>
-              <li style="list-style-type: '>> ';">
+              <li id="fleche">
                 <p>Brevet mention bien</p>
               </li>
             </ul>
@@ -101,10 +115,10 @@
               <li>
                 <p>Terminal spécialité mathématiques et N.S.I. (Numérique et Science Informatique)</p>
               </li>
-              <li style="list-style-type: '>> ';">
+              <li id="fleche">
                 <p>Bac général mention assez bien</p>
               </li>
-              <li style="list-style-type: '>> ';">
+              <li id="fleche">
                 <p>Diplome du B.I.A. (Brevet d'Initiation à l'Aréonotique)</p>
               </li>
             </ul>
@@ -113,9 +127,9 @@
             <p>B.U.T. informatique à Limoges [En cours]</p>
           </li>
         </ul>
-        <hr style="margin: 5px 1200px 5px auto;">
+        <hr align="left">
         <ul>
-          <li style="list-style-type: '>> ';">
+          <li id="fleche">
             <p>Diplome de premier secours</p>
           </li>
         </ul>
@@ -203,29 +217,85 @@
       <section id="MesLangages">
         <h1>Mes langages</h1>
         <article>
-          <div>
-            <img src="https://skillicons.dev/icons?i=html" alt="html" title="HTML" />
+          <div id="carteTournante">
+            <div id="carteTournanteEnsemble">
+              <div id="carteTournanteDevant">
+                <img src="https://skillicons.dev/icons?i=html" alt="HTML" title="HTML" />
+              </div>
+              <div id="carteTournanteDerriere">
+                <p>HTML</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="https://skillicons.dev/icons?i=css" alt="css" title="CSS" />
+          <div id="carteTournante">
+            <div id="carteTournanteEnsemble">
+              <div id="carteTournanteDevant">
+                <img src="https://skillicons.dev/icons?i=css" alt="CSS" title="CSS" />
+              </div>
+              <div id="carteTournanteDerriere">
+                <p>CSS</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="https://skillicons.dev/icons?i=c" alt="c" title="C" />
+          <div id="carteTournante">
+            <div id="carteTournanteEnsemble">
+              <div id="carteTournanteDevant">
+                <img src="https://skillicons.dev/icons?i=c" alt="C" title="C" />
+              </div>
+              <div id="carteTournanteDerriere">
+                <p>C</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="https://skillicons.dev/icons?i=linux" alt="linux" title="Linux" />
+          <div id="carteTournante">
+            <div id="carteTournanteEnsemble">
+              <div id="carteTournanteDevant">
+                <img src="https://skillicons.dev/icons?i=linux" alt="Bash" title="Bash" />
+              </div>
+              <div id="carteTournanteDerriere">
+                <p>Bash</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="https://skillicons.dev/icons?i=sqlite" alt="sqlite" title="SQLite" />
+          <div id="carteTournante">
+            <div id="carteTournanteEnsemble">
+              <div id="carteTournanteDevant">
+                <img src="https://skillicons.dev/icons?i=sqlite" alt="SQMite" title="SQLite" />
+              </div>
+              <div id="carteTournanteDerriere">
+                <p>SQLite</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="https://skillicons.dev/icons?i=java" alt="java" title="Java" />
+          <div id="carteTournante">
+            <div id="carteTournanteEnsemble">
+              <div id="carteTournanteDevant">
+                <img src="https://skillicons.dev/icons?i=java" alt="Java" title="Java" />
+              </div>
+              <div id="carteTournanteDerriere">
+                <p>Java</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="https://skillicons.dev/icons?i=python" alt="python" title="Python" />
+          <div id="carteTournante">
+            <div id="carteTournanteEnsemble">
+              <div id="carteTournanteDevant">
+                <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" />
+              </div>
+              <div id="carteTournanteDerriere">
+                <p>Python</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="https://skillicons.dev/icons?i=r" alt="r" title="R" />
+          <div id="carteTournante">
+            <div id="carteTournanteEnsemble">
+              <div id="carteTournanteDevant">
+                <img src="https://skillicons.dev/icons?i=r" alt="r" title="R" />
+              </div>
+              <div id="carteTournanteDerriere">
+                <p>R</p>
+              </div>
+            </div>
           </div>
         </article>
       </section>
@@ -352,33 +422,31 @@
         <h1>Mes contacts</h1>
         <article id="MesContactsBD">
           <a href="mailto:henzo.renet@etu.unilim.fr">
-            <div>
+            <div id="reseau">
               <img src="./ressources/icon/e-mail.png" alt="logo e-mail">
               <p>E-mail</p>
             </div>
           </a>
           <a href="https://www.instagram.com/henzodu33?igsh=MTFtYTRrbW1lbzZqcg==">
-            <div>
+            <div id="reseau">
               <img src="./ressources/icon/instagram.png" alt="logo instagram">
               <p>Instagram</p>
             </div>
           </a>
           <a href="https://github.com/ProgrameurGentil">
-            <div>
+            <div id="reseau">
               <img src="./ressources/icon/github_clair.png" alt="logo github" id="iconGithub">
               <p>Github</p>
             </div>
           </a>
-        </article>
-        <article>
           <a href="https://stackoverflow.com/users/23424763/programmeurdu33">
-            <div>
+            <div id="reseau">
               <img src="./ressources/icon/stack-overflow.png" alt="logo stack overflow">
               <p>Stack Overflow</p>
             </div>
           </a>
           <a href="https://discord.gg/TccMp77x">
-            <div>
+            <div id="reseau">
               <img src="./ressources/icon/discord.png" alt="logo discord">
               <p>Discord</p>
             </div>
@@ -386,11 +454,22 @@
         </article>
         <section class="message">
           <div id="message">
-            <text style="font-size: 30px; margin:5px 0;">Me soumettre un message :</text>
-            <input type="mail" id="mail" name="mail" placeholder="Entrez votre mail" style="display:block; margin:5px 0; padding: 5px;">
-            <input type="text" id="sujet" name="sujet" placeholder="Entrez le sujet" style="display:block; margin:5px 0; padding: 5px;">
-            <textarea id="corps" placeholder="Entrez votre message" style="display:block; padding: 5px;"></textarea>
-            <button id="envoiMessage" name="envoiMessage" onclick="envoyerMessage()" style="display:block; margin:5px 0; padding: 5px; font-size: 15px;">Soumettre</button>
+            <h2>Me soumettre un message :</h2>
+            <div id="inputs">
+              <div id="ensembleInput">
+                <label for="mail">Mail</label>
+                <input type="mail" id="mail" name="mail" placeholder="Entrez votre mail">
+              </div>
+              <div id="ensembleInput">
+                <label for="sujet">Sujet</label>
+                <input type="text" id="sujet" name="sujet" placeholder="Entrez le sujet">
+              </div>
+            </div>
+            <textarea id="corps" placeholder="Entrez votre message"></textarea>
+            <div id="conteneurSoumettre">
+              <p id="messageDEnvoie"></p>
+              <button type="button" id="envoiMessage" name="envoiMessage">Soumettre</button>
+            </div>
           </div>
         </section>
       </section>
@@ -398,7 +477,7 @@
       
     </main>
     <footer>
-      <section class="footer">
+      <div class="source">
         <h1>Sources</h1>
       <ul>
         <li>
@@ -414,13 +493,21 @@
           <p><a href="https://www.flaticon.com/fr/auteurs/iconsmind">iconsmind</a></p>
         </li>
         <li>
+          <p><a href="https://www.flaticon.com/fr/auteurs/th-studio">th studio</a></p>
+        </li>
+        <li>
           <p><a href="https://www.flaticon.com/fr/auteurs/freepik">Freepik</a></p>
         </li>
         <li>
           <p><a href="https://www.flaticon.com/fr/auteurs/bsd">bsd</a></p>
         </li>
       </ul>
-      </section>
+      </div>
+      <div>
+        <p>Réalisé par <span id="nom">Henzo RENET</span>.</p>
+        <p>Hébergé sur GitHub Pages.</p>
+        <p>Tout droit réservé.</p>
+      </div>
     </footer>
   </body>
 

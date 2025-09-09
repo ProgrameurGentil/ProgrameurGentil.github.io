@@ -87,6 +87,7 @@ nav.menu > div {
 main {
 	color: var(--couleur-ecriture-sombre);
 	position: relative;
+	display: grid;
 	justify-items: center;
 	align-items: center;
 	margin: 50px 0;

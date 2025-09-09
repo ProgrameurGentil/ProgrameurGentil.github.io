@@ -1,13 +1,3 @@
-@media screen and (max-width: 980px) { 
-  section#MesContacts article#MesContactsBD {
-    border-right: 0px solid;
-  }
-
-  /*section#MesIDEs article {
-    display: block;
-  }*/
-}
-
 @media screen and (max-width: 1260px) {
   section#MesIDEs article {
     display: block;
@@ -18,6 +8,58 @@
   }
 }
 
+@media screen and (max-width: 769px) {
+  section#MesProjets article#note p {
+    font-size: 15px;
+  }
+
+  section.message div#message {
+    width: 70%;
+  }
+
+  section.message div#message textarea#corps {
+    height: 110px;
+  }
+
+  section.message div#message div#inputs {
+    display: block;
+  }
+
+  section.message div#message div#inputs div#ensembleInput:first-child {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+  }
+
+  main {
+    margin: 10px 10px;
+  }
+
+  aside.Sommaire {
+    /*display: none;*/
+    height: auto;
+    width: 250px;
+    padding-left: 20px;
+    border-radius: 20px;
+    top: 20px;
+    left: -250px;
+    /* transform: translateX(275px); */
+    transition: transform 2s;
+  } 
+
+  aside.Sommaire div#sommaireHaut{
+    display: none;
+  }
+}
+
+/*
 @media screen and (max-width: 450px) {
   section.footer h1 {
     font-size: 20px;
@@ -32,7 +74,7 @@
   }
 }
 
-/*
+
 @media screen and (max-width: 1260px) {
   section#MesIDEs article#articleIDEl1 {
     display: block;
@@ -40,5 +82,18 @@
   
   #MesIDEs div#explicationIDE {
     transition: max-width 0.2s ease, padding 0.2s ease, border-radius 0.5s ease;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  body {
+    grid-template-areas: "header header"
+                         "main main"
+                         "footer footer";
+  }
+
+  aside.Sommaire {
+    position: relative;
   }
 }*/

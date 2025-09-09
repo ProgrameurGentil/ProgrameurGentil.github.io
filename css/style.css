@@ -1,19 +1,42 @@
 * {
 	transition: all 0.3s ease;
 	transition: background 1s;
+  box-sizing: border-box;
 }
 
 :root {
-	--color-bg-body : #1A1A1D;
-	--color-white : white;
-	--color-bg-h-selection : #7a2161;
-	--color-bg-sommaire : #0F0F0F;
-	--color-bg-ide : #3C3D37;
-	--color-bg-projet : #222222;
-	--color-projet-a : #CCF2F4;
-	--color-bg-hobbies : #222222;
-	--color-bg-message : #222831;
-	--color-bg-footer : #181823; 
+
+	/**/
+	--couleur-selection-titre : #7a2161;
+	
+
+	--couleur-sombre : #1A1A1D;
+	--couleur-sombre-ecriture : white;
+	--couleur-sombre-sommaire : #0F0F0F;
+	--couleur-sombre-sommaire-lien-selection : #CAE8BD;
+	--couleur-sombre-section-ide : #3C3D37;
+	--couleur-sombre-section-langage : #222222;
+	--couleur-sombre-section-projet : #222222;
+	--couleur-sombre-section-projet-lien : #CCF2F4;
+	--couleur-sombre-section-hobbie : #222222;
+	--couleur-sombre-section-contact : #222831;
+	--couleur-sombre-section-contact-bouton : #88304E;
+	--couleur-sombre-section-contact-erreur : #e04747;
+	--couleur-sombre-footer : #181823;
+
+	--couleur-claire : #FFFDF6;
+	--couleur-claire-ecriture : #000000;
+	--couleur-claire-sommaire : #D5C7A3;
+	--couleur-claire-sommaire-lien-selection : #58AA63;
+	--couleur-claire-section-ide : #FAF6E9;
+	--couleur-claire-section-langage : #FAF6E9;
+	--couleur-claire-section-projet : #FAF6E9;
+	--couleur-claire-section-projet-lien : #1E2A78;
+	--couleur-claire-section-hobbie : #FAF6E9;
+	--couleur-claire-section-contact  : #FAF6E9;
+	--couleur-claire-section-contact-bouton : #FAF6D2;
+	--couleur-claire-section-contact-erreur : #e35959;
+	--couleur-claire-footer : #F6F6F6;
 }
 
 html {
@@ -21,33 +44,36 @@ html {
 }
 
 body {
-	background-color: var(--color-bg-body);
-	color: var(--color-white);
+	background-color: var(--couleur-sombre);
+	color: var(--couleur-sombre-ecriture);
 	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+	margin: 0;
 }
 
 p::selection {
-	color: var(--color-white);
+	color: var(--couleur-sombre-ecriture);
   background: #49098e;
 }
 
 h1::selection {
-	color: var(--color-white);
-	background: var(--color-bg-h-selection);
+	color: var(--couleur-sombre-ecriture);
+	background: var(--couleur-selection-titre);
 }
 
 h2::selection {
-	color: var(--color-white);
-	background: var(--color-bg-h-selection);
+	color: var(--couleur-sombre-ecriture);
+	background: var(--couleur-selection-titre);
 }
 
 h3::selection {
-	color: var(--color-white);
-	background: var(--color-bg-h-selection);
+	color: var(--couleur-sombre-ecriture);
+	background: var(--couleur-selection-titre);
 }
 
 a {
-	color: var(--color-white);
+	color: var(--couleur-sombre-ecriture);
 	text-decoration: none;
 	user-drag: none;
   -webkit-user-drag: none;
@@ -58,12 +84,12 @@ a {
 }
 
 a::selection {
-	color: var(--color-white);
+	color: var(--couleur-sombre-ecriture);
 	background: none;
 }
 
 br::selection {
-	color: var(--color-white);
+	color: var(--couleur-sombre-ecriture);
 	background: none;
 }
 
@@ -84,20 +110,10 @@ h1 {
   text-align: left;
 }
 
-hr {
-	margin: 5px 40px 5px auto;
-}
-
 hr#doubleBarCourte {
 	margin: 10px 160px -8px 160px;
 	border: 1px double;
 }
-
-main {
-	/*height:2000px;*/
-  padding-left:300px;
-}
-
 
 img {
     user-drag: none;
@@ -116,80 +132,106 @@ button {
 /*                                                   */
 
 body[data-theme="light"] {
-  background-color: #FFFDF6;
-  color: #000000;
+  background-color: var(--couleur-claire);
+  color: var(--couleur-claire-ecriture);
 }
 
 /*mon sommaire*/
 [data-theme="light"] .Sommaire {
-  background-color: #D5C7A3;
+  background-color: var(--couleur-claire-sommaire);
 }
 
 [data-theme="light"] .Sommaire nav {
-  background-color: #D5C7A3;
-  color: #000000;
+  color: var(--couleur-claire-ecriture);
 }
 
 [data-theme="light"] .Sommaire nav a {
-  color: #000000;
+  color: var(--couleur-claire-ecriture);
+}
+
+[data-theme="light"] .Sommaire nav a:hover {
+  color: var(--couleur-claire-sommaire-lien-selection);
 }
 
 /*mes projets*/
 [data-theme="light"] section#MesProjets .projet {
-  background-color: #FAF6E9;
-  color: #000000;
+  background-color: var(--couleur-claire-section-projet);
+  color: var(--couleur-claire-ecriture);
 }
 
 [data-theme="light"] section#MesProjets .projet a {
-  color: #1E2A78;
+  color: var(--couleur-claire-section-projet-lien);
 }
 
 /*mes hobbies*/
 [data-theme="light"] section#MesHobbies article#articleHobbies {
-  background-color: #FAF6E9;
-  color: #000000;
+  background-color: var(--couleur-claire-section-hobbie);
+  color: var(--couleur-claire-ecriture);
+}
+
+/*mes langages*/
+[data-theme="light"] section#MesLangages div#carteTournanteDerriere {
+	background-color: var(--couleur-claire-section-langage);
+}
+
+[data-theme="light"] section.message div#message div#inputs div#ensembleInput label {
+	background-color: var(--couleur-claire);
 }
 
 /*mes ides*/
 [data-theme="light"] section#MesIDEs article div#IDE div#explicationIDE {
-  color: #000000;
-  background-color: #FAF6E9;
+  background-color: var(--couleur-claire-section-ide);
+  color: var(--couleur-claire-ecriture);
 }
 
 /*mes contacts*/
 [data-theme="light"] section#MesContacts article p {
-  color: #000000;
+  color: var(--couleur-claire-ecriture);
 }
-
-/*
-[data-theme="light"] section#MesContacts section div#message input[type="text"], input[type="mail"], textarea#corps, button#envoiMessage {
-  background-color : #FAF6E9;
-  color: #000000;
-} */
 
 [data-theme="light"] section#MesContacts section div#message input[type="text"]#sujet, 
 [data-theme="light"] section#MesContacts section div#message input[type="mail"]#mail, 
-[data-theme="light"] section#MesContacts section div#message textarea, 
-[data-theme="light"] section#MesContacts section div#message button {
-  background-color : #FAF6E9;
-  color: #000000;
+[data-theme="light"] section#MesContacts section div#message textarea {
+  background-color :var(--couleur-claire-section-contact);
+  color: var(--couleur-claire-ecriture);
+}
+
+[data-theme="light"] section#MesContacts section div#message button#envoiMessage {
+	background-color: var(--couleur-claire-section-contact-bouton);
+	color: var(--couleur-claire-ecriture);
 }
 
 /*sources*/
-[data-theme="light"] section.footer {
-  color: #000000;
-  background-color: #F6F6F6;
+[data-theme="light"] footer {
+  background-color: var(--couleur-claire-footer);
+  color: var(--couleur-claire-ecriture);
 }
 
-[data-theme="light"] section.footer ul li p a {
-  color: #000000;
+[data-theme="light"] footer > div.source * {
+  color: var(--couleur-claire-ecriture);
 } 
 
 /*                                                   */
 
+/* // Body // */
+
+body {
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: "aside header"
+											 "aside main"
+											 "aside footer";	
+}
+
 /* //////////// header (titre) //////////// */
+
+header {
+	grid-area: header;
+	margin: 10px 20PX;
+}
+
 header h1 {
-	padding-left:300px;
 	font-size: 55px;
 	font-family: "Chivo Mono", monospace;
 	font-optical-sizing: auto;
@@ -198,33 +240,38 @@ header h1 {
 }
 
 header hr {
-	margin: 0 40px 0 300px;
+	width: 45%;
 }
 
 /* //////////// Sommaire //////////// */
+aside {
+	grid-area: aside;
+}
+
 aside.Sommaire {
 	position: fixed;
-	left:0;
+	/*left:0;
   top:0;
-  bottom:0;
-  width:283px;
+  bottom:0;*/
+  width:300px;
   height:100%;
-  background-color: #0F0F0F;
+  background-color: var(--couleur-sombre-sommaire);
+  padding: 0 5px;
+  z-index: 500;
 }
 
 nav {
-	background-color: #0F0F0F;
 	margin: 0 0 10px 0;
 }
 
-nav img {
+nav div#sommaireHaut img {
 	width: 267px;
-	margin: 5px; /* haut droite bas gauche*/
+	margin: 5px 10px; /* haut droite bas gauche*/
 	border: 1px solid;
 	border-color: white;
 }
 
-nav iframe {
+nav div#sommaireHaut iframe {
 	margin: 0 0 5px -2px;
 }
 
@@ -237,20 +284,20 @@ div#iframe *::-webkit-scrollbar {
   display: none;
 }
 
-nav h1 {
+nav div#sommaireBas h1 {
 	margin: 2px 0 10px 10px ;
 }
 
 
-nav li {
+nav div#sommaireBas li {
 	/*list-style: none;*/
 	list-style-type: "> ";
 	font-family: "Poetsen One", sans-serif;
 	margin: 5px 0;
 }
 
-nav li a:hover {
-	color: #CAE8BD;
+nav div#sommaireBas li a:hover {
+	color: var(--couleur-sombre-sommaire-lien-selection);
 }
 
 /* //////////// div de selection de themes //////////// */
@@ -261,7 +308,7 @@ div.ConteneurTheme {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 8;
+  z-index: 1000;
 }
 
 div.ConteneurTheme button {
@@ -278,7 +325,52 @@ div.ConteneurTheme button:active {
 }
 
 div.ConteneurTheme img {
+	width: 90%;
+}
+
+/* //////////// div de selection de menu //////////// */
+
+div.ConteneurMenu {
+	width: 45px;
+  height: 45px;
+  position: fixed;
+  right: 20px;
+  top: 30px;
+  z-index: 1000;
+}
+
+div.ConteneurMenu button {
+	padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+}
+
+div.ConteneurMenu button:active {
+  transform: scale(0.9);
+}
+
+div.ConteneurMenu img {
 	width: 100%;
+}
+
+/* //////////// Main //////////// */
+main {
+	grid-area: main;
+	margin: 10px 20px;
+}
+
+/* //////////// section Mon Parcours //////////// */
+section#MonParcours hr {
+	width: 15%;
+	border: .5px dashed;
+}
+
+section#MonParcours li#fleche::marker {
+	content: '>>  ';
 }
 
 /* //////////// section Mes IDEs //////////// */
@@ -308,7 +400,7 @@ section#MesIDEs article {
 	max-width: 0;
 	overflow: hidden;
 	transition: max-width 1s ease, padding 1s ease, border-radius 0.5s ease;
-	background-color: #3C3D37;
+	background-color: var(--couleur-sombre-section-ide);
 }
 
 #MesIDEs img {
@@ -329,19 +421,6 @@ section#MesIDEs article {
 	translate: 10px;
 }
 
-/*#MesIDEs img:hover {
-	transform: scale(1.5);
-	margin: 10px 5px;
-	overflow: hidden;
-}*/
-/*
-#MesIDEs img:hover + #explicationIDE{
-	display: inline-block;
-	background-color: #3C3D37;
-	padding: 0 10px;
-	border-radius: 10px;
-}*/
-
 /* //////////// section Mes Projets //////////// */
 .projet {
 	display: inline-table;
@@ -350,7 +429,7 @@ section#MesIDEs article {
 	border: 1px solid;
 	border-radius: 10px;
 	padding: 10px;
-	background-color: #222222;
+	background-color: var(--couleur-sombre-section-projet);
 	margin: 3px 0;
 }
 
@@ -366,7 +445,7 @@ section#MesIDEs article {
 
 .projet a {
 	text-decoration: underline;
-	color: #CCF2F4;
+	color: var(--couleur-sombre-section-projet-lien);
 	text-align: right;
 }
 
@@ -384,9 +463,50 @@ section#MesIDEs article {
 }
 
 /* //////////// section Mes Langages //////////// */
-section#MesLangages div {
+section#MesLangages div#carteTournante {
 	display: inline-block;
-	
+	background-color: transparent;
+  width: 110px;
+  height: 110px;	
+  margin: 7px;
+}
+
+section#MesLangages div#carteTournanteEnsemble {
+	position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+section#MesLangages div#carteTournante:hover  div#carteTournanteEnsemble {
+  transform: rotateY(180deg);
+}
+
+section#MesLangages div#carteTournanteDevant, section#MesLangages div#carteTournanteDerriere {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+section#MesLangages div#carteTournanteDevant {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section#MesLangages div#carteTournanteDerriere {
+	border-radius: 20px;
+	text-align: center;
+	background-color: var(--couleur-sombre-section-langage);
+	transform: rotateY(180deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
 }
 
 section#MesLangages article {
@@ -397,15 +517,9 @@ section#MesLangages article {
 #MesLangages img {
 	width:100px;
 	height:100px;
-	margin: 10px;
 	transition: transform .1s;
 }
 
-#MesLangages img:hover {
-	transform: scale(1.5);
-	margin: 10px 5px;
-	overflow: hidden;
-}
 
 /* //////////// section Mes Hobbies //////////// */
 section#MesHobbies {
@@ -423,7 +537,7 @@ section#MesHobbies article#articleHobbies {
 	border: 1px solid;
 	border-radius: 10px;
 	padding: 10px;
-	background-color: #222222;
+	background-color: var(--couleur-sombre-section-hobbie);
 }
 
 hr#hrHobbies {
@@ -451,14 +565,12 @@ section#MesContacts {
 }
 
 section#MesContacts article {
-	display: inline-flex;
-  flex-direction: column;
+	display: grid;
+	grid-template-rows: repeat(3, 80px);
+	grid-auto-columns: 240px;
+	grid-auto-flow: column;
   width: 330px;
   position: relative;
-}
-
-section#MesContacts article#MesContactsBD {
-	border-right: 1px solid;
 }
 
 section#MesContacts img {
@@ -466,68 +578,177 @@ section#MesContacts img {
 	height: 50px;
 }
 
-section#MesContacts div {
+section#MesContacts div#reseau {
 	display: flex;
 	margin: 10px 15px;
 }
 
-section#MesContacts div img {
+section#MesContacts div#reseau > img {
 	margin: 0 15px;
 }
 
-section#MesContacts section div#message{
+
+/*message*/
+
+section.message div#message{
 	display: block;
+	width: 50%;
 }
 
-section#MesContacts section div#message input[type="text"]#sujet, 
-section#MesContacts section div#message input[type="mail"]#mail, 
-section#MesContacts section div#message textarea, 
-section#MesContacts section div#message button {
-  background-color : #222831;
+section.message div#message div#inputs {
+	display: flex;
+	margin: 20px 0 10px 0;
+	width: 100%;
+}
+
+section.message div#message div#inputs div#ensembleInput {
+	width: 100%;
+	height: 47px;
+	position: relative;
+  top: -18px;
+}
+
+section.message div#message div#inputs input{
+	display: block;
+	border: 1px solid #44444E;
+	border-radius: 10px;
+	padding: 10px;
+	display:block; 
+	margin:5px 0;
+	width: 100%;
+}
+
+section.message div#message div#inputs div#ensembleInput label {
+	position: relative;
+  top: 20%;
+  left: 10%;
+  background: var(--couleur-sombre);
+  margin: 0;
+  padding: 0 5px;
+  font-size: 13px;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+section.message div#message div#inputs div#ensembleInput:has(input:focus) label,
+section.message div#message div#inputs div#ensembleInput:has(input:not(:placeholder-shown)) label
+{
+	visibility: visible;
+}
+
+section.message div#message div#inputs div#ensembleInput:has(input:focus),
+section.message div#message div#inputs div#ensembleInput:has(input:not(:placeholder-shown)) {
+	position: relative;
+  top: -18px;
+}
+
+section.message div#message div#inputs div#ensembleInput:first-child { 
+	margin-right:10px;
+}
+
+section.message div#message input[type="text"]#sujet, 
+section.message div#message input[type="mail"]#mail, 
+section.message div#message textarea, 
+section.message div#message div#conteneurSoumettre button {
+  background-color : var(--couleur-sombre-section-contact);
   color: white;
-  border: 0px;
 }
 
-section#MesContacts section textarea {
+section.message div#message div#inputs div#ensembleInput input:focus {
+	 background: transparent;
+}
+
+section.message textarea {
+	display:block; 
 	resize: none;
-	width: 500px;
+	width: 100%;
 	height: 200px;
+	border-radius: 10px;
+	padding: 5px;
 }
 
+section.message div#conteneurSoumettre {
+	display: flex;
+	flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+section.message div#conteneurSoumettre button#envoiMessage {
+  display: block;
+  margin: 10px -2px;
+  margin-right: 10px ;
+  padding: 7px 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #44444E;
+  max-height: 39px;
+}
+
+section.message div#conteneurSoumettre button#envoiMessage:hover {
+	border-color: var(--couleur-sombre-section-contact-bouton);
+}
+
+.elementManquant {
+	border-color: var(--couleur-sombre-section-contact-erreur);
+}
+
+section.message div#message div#inputs input.elementManquant {
+	border-color: var(--couleur-sombre-section-contact-erreur);
+}
 /* //////////// footer //////////// */
 
-.footer {
+footer {
+	grid-area: footer;
+	background-color: var(--couleur-sombre-footer);
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	padding: 20px 0;
+}
+
+footer > div.source {
 	padding: 10px;
-	padding-left:300px;
-	background-color: #181823;
 	color: white;
-	/*position: static;*/
   margin: -10px;
 }
 
-.footer h1 {
-  font-family: "Jersey 10", sans-serif;
+footer > div.source h1 {
+  font-family: "Fira Code", monospace;
   font-weight: 400;
   font-style: normal;
-  font-size: 30px;
+  font-size: 20px;
   margin: 0px 10px 25px 10px
 }
-.footer a {
-  font-family: "Jersey 10", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.footer p {
-  font-family: "Jersey 10", sans-serif;
+
+footer > div.source a {
+  font-family: "Fira Code", monospace;
   font-weight: 400;
   font-style: normal;
 }
 
-.footer ul {
+footer > div.source p {
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+}
+
+footer > div.source ul {
 	margin: -20px;
 }
 
-.footer li {
+footer > div.source li {
 	margin: -10px;
 	list-style-type: "";
+	position: relative;
+  left: 20px;
+}
+
+footer > div.source li:first-child {
+	position: relative;
+  left: 5px;
+}
+
+span#nom:hover {
+	text-decoration: underline;
 }
