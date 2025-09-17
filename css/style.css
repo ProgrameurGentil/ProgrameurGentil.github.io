@@ -170,12 +170,12 @@ body[data-theme="light"] {
 }
 
 /*mes langages*/
-[data-theme="light"] section#MesLangages div#carteTournanteDerriere {
+[data-theme="light"] section#MesLangages div#contour {
 	background-color: var(--couleur-claire-section-langage);
 }
 
-[data-theme="light"] section.message div#message div#inputs div#ensembleInput label {
-	background-color: var(--couleur-claire);
+[data-theme="light"] section#MesLangages div#explicationCouleur > div#couleur circle:last-child {
+  fill: var(--couleur-claire);
 }
 
 /*mes ides*/
@@ -199,6 +199,10 @@ body[data-theme="light"] {
 [data-theme="light"] section#MesContacts section div#message button#envoiMessage {
 	background-color: var(--couleur-claire-section-contact-bouton);
 	color: var(--couleur-claire-ecriture);
+}
+
+[data-theme="light"] section.message div#message div#inputs div#ensembleInput label {
+	background-color: var(--couleur-claire);
 }
 
 /*sources*/
@@ -463,6 +467,32 @@ section#MesIDEs article {
 }
 
 /* //////////// section Mes Langages //////////// */
+
+section#MesLangages div#sommaireCouleurs {
+	display: flex;
+	flex-direction: row;
+}
+
+section#MesLangages div#explicationCouleur > div#couleur circle:last-child {
+  fill: var(--couleur-sombre);
+}
+
+section#MesLangages div#explicationCouleur {
+  display: flex;
+  margin: 0;
+  margin-left: 15px;
+}
+
+section#MesLangages div#explicationCouleur:first-child {
+  margin-left: 0;
+}
+
+section#MesLangages div#explicationCouleur > p{
+  margin: 0;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
 section#MesLangages div#carteTournante {
 	display: inline-block;
 	background-color: transparent;
@@ -500,13 +530,20 @@ section#MesLangages div#carteTournanteDevant {
 
 section#MesLangages div#carteTournanteDerriere {
 	border-radius: 20px;
-	text-align: center;
-	background-color: var(--couleur-sombre-section-langage);
+	text-align: center;	
 	transform: rotateY(180deg);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 20px;
+}
+
+section#MesLangages div#contour {
+	background-color: var(--couleur-sombre-section-langage);
+	align-content: center;
+	width: 80%;
+	height: 80%;
+	border-radius: 14px;
 }
 
 section#MesLangages article {
@@ -520,6 +557,20 @@ section#MesLangages article {
 	transition: transform .1s;
 }
 
+section#MesLangages .bleu {
+	background-color: #91C8E4;
+	fill: #91C8E4;
+}
+
+section#MesLangages .vert {
+	background-color: #8FA31E;
+	fill: #8FA31E;
+}
+
+section#MesLangages .rose {
+	background-color: #FAA4BD;
+	fill: #FAA4BD;
+}
 
 /* //////////// section Mes Hobbies //////////// */
 section#MesHobbies {

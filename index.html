@@ -220,15 +220,59 @@
       </section>
       <hr>
       <section id="MesLangages">
+        <!-- 
+        Bleu : Maitrise
+        Vert : Utilise
+        Rose : Connaissance / Base
+        -->
         <h1>Mes langages</h1>
+        <!--
+        <div>
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+            <circle cx="100" cy="100" r="100" fill="red"></circle>
+            <circle cx="100" cy="100" r="50" fill="green" style="fill: var(--couleur-sombre);"></circle>
+          </svg>
+        </div>
+        -->
+        <div id="sommaireCouleurs">
+          <div id="explicationCouleur">
+            <div id="couleur">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <circle cx="100" cy="100" r="100" class="bleu"></circle>
+                <circle cx="100" cy="100" r="50"></circle>
+              </svg>
+            </div>
+            <p>Maitrisé</p>
+          </div>
+          <div id="explicationCouleur">
+            <div id="couleur">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <circle cx="100" cy="100" r="100" class="vert"></circle>
+                <circle cx="100" cy="100" r="50"></circle>
+              </svg>
+            </div>
+            <p>Utilisé</p>
+          </div>
+          <div id="explicationCouleur">
+            <div id="couleur">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <circle cx="100" cy="100" r="100" class="rose"></circle>
+                <circle cx="100" cy="100" r="50"></circle>
+              </svg>
+            </div>
+            <p>Base</p>
+          </div>
+        </div>
         <article>
           <div id="carteTournante">
             <div id="carteTournanteEnsemble">
               <div id="carteTournanteDevant">
                 <img src="https://skillicons.dev/icons?i=html" alt="HTML" title="HTML" />
               </div>
-              <div id="carteTournanteDerriere">
-                <p>HTML</p>
+              <div id="carteTournanteDerriere" class="vert">
+                <div id="contour">
+                  <p>HTML</p>
+                </div>
               </div>
             </div>
           </div>
@@ -237,8 +281,22 @@
               <div id="carteTournanteDevant">
                 <img src="https://skillicons.dev/icons?i=css" alt="CSS" title="CSS" />
               </div>
-              <div id="carteTournanteDerriere">
-                <p>CSS</p>
+              <div id="carteTournanteDerriere" class="vert">
+                <div id="contour">
+                  <p>CSS</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="carteTournante">
+            <div id="carteTournanteEnsemble">
+              <div id="carteTournanteDevant">
+                <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" title="JavaScript" />
+              </div>
+              <div id="carteTournanteDerriere" class="rose">
+                <div id="contour">
+                  <p>Java Script</p>
+                </div>
               </div>
             </div>
           </div>
@@ -247,8 +305,10 @@
               <div id="carteTournanteDevant">
                 <img src="https://skillicons.dev/icons?i=c" alt="C" title="C" />
               </div>
-              <div id="carteTournanteDerriere">
-                <p>C</p>
+              <div id="carteTournanteDerriere" class="rose">
+                <div id="contour">
+                  <p>C</p>
+                </div>
               </div>
             </div>
           </div>
@@ -257,8 +317,10 @@
               <div id="carteTournanteDevant">
                 <img src="https://skillicons.dev/icons?i=linux" alt="Bash" title="Bash" />
               </div>
-              <div id="carteTournanteDerriere">
-                <p>Bash</p>
+              <div id="carteTournanteDerriere" class="vert">
+                <div id="contour">  
+                  <p>Bash</p>
+                </div>
               </div>
             </div>
           </div>
@@ -267,8 +329,10 @@
               <div id="carteTournanteDevant">
                 <img src="https://skillicons.dev/icons?i=sqlite" alt="SQMite" title="SQLite" />
               </div>
-              <div id="carteTournanteDerriere">
-                <p>SQLite</p>
+              <div id="carteTournanteDerriere" class="vert">
+                <div id="contour">
+                  <p>SQLite</p>
+                </div>
               </div>
             </div>
           </div>
@@ -277,8 +341,10 @@
               <div id="carteTournanteDevant">
                 <img src="https://skillicons.dev/icons?i=java" alt="Java" title="Java" />
               </div>
-              <div id="carteTournanteDerriere">
-                <p>Java</p>
+              <div id="carteTournanteDerriere" class="bleu">
+                <div id="contour">  
+                  <p>Java</p>
+                </div>
               </div>
             </div>
           </div>
@@ -287,8 +353,10 @@
               <div id="carteTournanteDevant">
                 <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" />
               </div>
-              <div id="carteTournanteDerriere">
-                <p>Python</p>
+              <div id="carteTournanteDerriere" class="bleu">
+                <div id="contour">
+                  <p>Python</p>
+                </div>
               </div>
             </div>
           </div>
@@ -297,8 +365,10 @@
               <div id="carteTournanteDevant">
                 <img src="https://skillicons.dev/icons?i=r" alt="r" title="R" />
               </div>
-              <div id="carteTournanteDerriere">
-                <p>R</p>
+              <div id="carteTournanteDerriere" class="rose">
+                <div id="contour">  
+                  <p>R</p>
+                </div>
               </div>
             </div>
           </div>
