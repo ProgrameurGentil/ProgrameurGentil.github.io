@@ -96,7 +96,7 @@ br::selection {
 p, label {
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  /*font-weight: <weight>;*/
   font-style: normal;
 }
 
@@ -104,7 +104,7 @@ h1 {
 	font-size: 40px;
   font-family: "Dosis", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  /*font-weight: <weight>;*/
   font-style: normal;
 
   text-align: left;
@@ -239,7 +239,7 @@ header h1 {
 	font-size: 55px;
 	font-family: "Chivo Mono", monospace;
 	font-optical-sizing: auto;
-	font-weight: <weight>;
+	/*font-weight: <weight>;*/
 	font-style: normal;
 }
 
