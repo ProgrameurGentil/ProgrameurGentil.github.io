@@ -63,7 +63,7 @@ function envoyerMessage() {
     var message = "# Message de mon Portefolio\n## Mail : \n" + mail.value + "\n## Sujet : \n" + sujet.value + "\n## Corps : \n" + corps.value;
 
     if (mail.value != "" && sujet.value != "" && corps.value != "" && verifEmail(mail.value)) {
-        fetch("https://discord.com/api/webhooks/1391430838004088943/LBis0t3tbvig7DYz7HXD-x-VnGzYruaUTTKfaYVjhL6ZhqSvgagRwa_HqmvSqP0qH4Eb", {
+        fetch("XXX", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -93,3 +93,4 @@ function envoyerMessage() {
     }
 
 }
+
